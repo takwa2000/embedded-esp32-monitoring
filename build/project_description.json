@@ -1,7 +1,7 @@
 {
     "version":            "1.3",
     "project_name":       "hello_world",
-    "project_version":    "1",
+    "project_version":    "d2d02ae-dirty",
     "project_path":       "/home/takwa/esp/hello_world",
     "idf_path":           "/home/takwa/esp/esp-idf",
     "build_dir":          "/home/takwa/esp/hello_world/build",
@@ -21,12 +21,12 @@
     "monitor_toolprefix": "xtensa-esp32-elf-",
     "c_compiler":         "/home/takwa/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc",
     "config_environment" : {
-        "COMPONENT_KCONFIGS" : "/home/takwa/esp/esp-idf/components/efuse/Kconfig;/home/takwa/esp/esp-idf/components/esp_common/Kconfig;/home/takwa/esp/esp-idf/components/esp_driver_dma/Kconfig;/home/takwa/esp/esp-idf/components/esp_driver_gpio/Kconfig;/home/takwa/esp/esp-idf/components/esp_hw_support/Kconfig;/home/takwa/esp/esp-idf/components/esp_libc/Kconfig;/home/takwa/esp/esp-idf/components/esp_mm/Kconfig;/home/takwa/esp/esp-idf/components/esp_partition/Kconfig;/home/takwa/esp/esp-idf/components/esp_pm/Kconfig;/home/takwa/esp/esp-idf/components/esp_rom/Kconfig;/home/takwa/esp/esp-idf/components/esp_security/Kconfig;/home/takwa/esp/esp-idf/components/esp_stdio/Kconfig;/home/takwa/esp/esp-idf/components/esp_system/Kconfig;/home/takwa/esp/esp-idf/components/esp_timer/Kconfig;/home/takwa/esp/esp-idf/components/freertos/Kconfig;/home/takwa/esp/esp-idf/components/hal/Kconfig;/home/takwa/esp/esp-idf/components/heap/Kconfig;/home/takwa/esp/esp-idf/components/log/Kconfig;/home/takwa/esp/esp-idf/components/mbedtls/Kconfig;/home/takwa/esp/esp-idf/components/pthread/Kconfig;/home/takwa/esp/esp-idf/components/soc/Kconfig;/home/takwa/esp/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS" : "/home/takwa/esp/esp-idf/components/driver/Kconfig;/home/takwa/esp/esp-idf/components/efuse/Kconfig;/home/takwa/esp/esp-idf/components/esp_common/Kconfig;/home/takwa/esp/esp-idf/components/esp_driver_dma/Kconfig;/home/takwa/esp/esp-idf/components/esp_driver_gpio/Kconfig;/home/takwa/esp/esp-idf/components/esp_hw_support/Kconfig;/home/takwa/esp/esp-idf/components/esp_libc/Kconfig;/home/takwa/esp/esp-idf/components/esp_mm/Kconfig;/home/takwa/esp/esp-idf/components/esp_partition/Kconfig;/home/takwa/esp/esp-idf/components/esp_pm/Kconfig;/home/takwa/esp/esp-idf/components/esp_ringbuf/Kconfig;/home/takwa/esp/esp-idf/components/esp_rom/Kconfig;/home/takwa/esp/esp-idf/components/esp_security/Kconfig;/home/takwa/esp/esp-idf/components/esp_stdio/Kconfig;/home/takwa/esp/esp-idf/components/esp_system/Kconfig;/home/takwa/esp/esp-idf/components/esp_timer/Kconfig;/home/takwa/esp/esp-idf/components/freertos/Kconfig;/home/takwa/esp/esp-idf/components/hal/Kconfig;/home/takwa/esp/esp-idf/components/heap/Kconfig;/home/takwa/esp/esp-idf/components/log/Kconfig;/home/takwa/esp/esp-idf/components/mbedtls/Kconfig;/home/takwa/esp/esp-idf/components/pthread/Kconfig;/home/takwa/esp/esp-idf/components/soc/Kconfig;/home/takwa/esp/esp-idf/components/spi_flash/Kconfig",
         "COMPONENT_KCONFIGS_PROJBUILD" : "/home/takwa/esp/esp-idf/components/bootloader/Kconfig.projbuild;/home/takwa/esp/esp-idf/components/esp_app_format/Kconfig.projbuild;/home/takwa/esp/esp-idf/components/esp_rom/Kconfig.projbuild;/home/takwa/esp/esp-idf/components/esptool_py/Kconfig.projbuild;/home/takwa/esp/esp-idf/components/partition_table/Kconfig.projbuild"
     },
     "common_component_reqs": [ "cxx", "esp_libc", "freertos", "esp_hw_support", "heap", "log", "soc", "hal", "esp_rom", "esp_common", "esp_system", "esp_stdio", "xtensa" ],
-    "build_components" : [ "app_update", "bootloader", "bootloader_support", "cxx", "efuse", "esp_app_format", "esp_blockdev", "esp_bootloader_format", "esp_common", "esp_driver_dma", "esp_driver_gpio", "esp_hal_ana_conv", "esp_hal_clock", "esp_hal_dma", "esp_hal_gpio", "esp_hal_gpspi", "esp_hal_i2s", "esp_hal_mspi", "esp_hal_pmu", "esp_hal_rtc_timer", "esp_hal_security", "esp_hal_timg", "esp_hal_touch_sens", "esp_hal_uart", "esp_hal_usb", "esp_hal_wdt", "esp_hw_support", "esp_libc", "esp_mm", "esp_partition", "esp_pm", "esp_rom", "esp_security", "esp_stdio", "esp_system", "esp_timer", "esp_usb_cdc_rom_console", "esptool_py", "freertos", "hal", "heap", "log", "main", "mbedtls", "partition_table", "pthread", "soc", "spi_flash", "xtensa", "" ],
-    "build_component_paths" : [ "/home/takwa/esp/esp-idf/components/app_update", "/home/takwa/esp/esp-idf/components/bootloader", "/home/takwa/esp/esp-idf/components/bootloader_support", "/home/takwa/esp/esp-idf/components/cxx", "/home/takwa/esp/esp-idf/components/efuse", "/home/takwa/esp/esp-idf/components/esp_app_format", "/home/takwa/esp/esp-idf/components/esp_blockdev", "/home/takwa/esp/esp-idf/components/esp_bootloader_format", "/home/takwa/esp/esp-idf/components/esp_common", "/home/takwa/esp/esp-idf/components/esp_driver_dma", "/home/takwa/esp/esp-idf/components/esp_driver_gpio", "/home/takwa/esp/esp-idf/components/esp_hal_ana_conv", "/home/takwa/esp/esp-idf/components/esp_hal_clock", "/home/takwa/esp/esp-idf/components/esp_hal_dma", "/home/takwa/esp/esp-idf/components/esp_hal_gpio", "/home/takwa/esp/esp-idf/components/esp_hal_gpspi", "/home/takwa/esp/esp-idf/components/esp_hal_i2s", "/home/takwa/esp/esp-idf/components/esp_hal_mspi", "/home/takwa/esp/esp-idf/components/esp_hal_pmu", "/home/takwa/esp/esp-idf/components/esp_hal_rtc_timer", "/home/takwa/esp/esp-idf/components/esp_hal_security", "/home/takwa/esp/esp-idf/components/esp_hal_timg", "/home/takwa/esp/esp-idf/components/esp_hal_touch_sens", "/home/takwa/esp/esp-idf/components/esp_hal_uart", "/home/takwa/esp/esp-idf/components/esp_hal_usb", "/home/takwa/esp/esp-idf/components/esp_hal_wdt", "/home/takwa/esp/esp-idf/components/esp_hw_support", "/home/takwa/esp/esp-idf/components/esp_libc", "/home/takwa/esp/esp-idf/components/esp_mm", "/home/takwa/esp/esp-idf/components/esp_partition", "/home/takwa/esp/esp-idf/components/esp_pm", "/home/takwa/esp/esp-idf/components/esp_rom", "/home/takwa/esp/esp-idf/components/esp_security", "/home/takwa/esp/esp-idf/components/esp_stdio", "/home/takwa/esp/esp-idf/components/esp_system", "/home/takwa/esp/esp-idf/components/esp_timer", "/home/takwa/esp/esp-idf/components/esp_usb_cdc_rom_console", "/home/takwa/esp/esp-idf/components/esptool_py", "/home/takwa/esp/esp-idf/components/freertos", "/home/takwa/esp/esp-idf/components/hal", "/home/takwa/esp/esp-idf/components/heap", "/home/takwa/esp/esp-idf/components/log", "/home/takwa/esp/hello_world/main", "/home/takwa/esp/esp-idf/components/mbedtls", "/home/takwa/esp/esp-idf/components/partition_table", "/home/takwa/esp/esp-idf/components/pthread", "/home/takwa/esp/esp-idf/components/soc", "/home/takwa/esp/esp-idf/components/spi_flash", "/home/takwa/esp/esp-idf/components/xtensa", "" ],
+    "build_components" : [ "app_update", "bootloader", "bootloader_support", "cxx", "driver", "efuse", "esp_app_format", "esp_blockdev", "esp_bootloader_format", "esp_common", "esp_driver_dma", "esp_driver_gpio", "esp_hal_ana_conv", "esp_hal_clock", "esp_hal_dma", "esp_hal_gpio", "esp_hal_gpspi", "esp_hal_i2c", "esp_hal_i2s", "esp_hal_mspi", "esp_hal_pmu", "esp_hal_rtc_timer", "esp_hal_security", "esp_hal_timg", "esp_hal_touch_sens", "esp_hal_twai", "esp_hal_uart", "esp_hal_usb", "esp_hal_wdt", "esp_hw_support", "esp_libc", "esp_mm", "esp_partition", "esp_pm", "esp_ringbuf", "esp_rom", "esp_security", "esp_stdio", "esp_system", "esp_timer", "esp_usb_cdc_rom_console", "esptool_py", "freertos", "hal", "heap", "log", "main", "mbedtls", "partition_table", "pthread", "soc", "spi_flash", "xtensa", "" ],
+    "build_component_paths" : [ "/home/takwa/esp/esp-idf/components/app_update", "/home/takwa/esp/esp-idf/components/bootloader", "/home/takwa/esp/esp-idf/components/bootloader_support", "/home/takwa/esp/esp-idf/components/cxx", "/home/takwa/esp/esp-idf/components/driver", "/home/takwa/esp/esp-idf/components/efuse", "/home/takwa/esp/esp-idf/components/esp_app_format", "/home/takwa/esp/esp-idf/components/esp_blockdev", "/home/takwa/esp/esp-idf/components/esp_bootloader_format", "/home/takwa/esp/esp-idf/components/esp_common", "/home/takwa/esp/esp-idf/components/esp_driver_dma", "/home/takwa/esp/esp-idf/components/esp_driver_gpio", "/home/takwa/esp/esp-idf/components/esp_hal_ana_conv", "/home/takwa/esp/esp-idf/components/esp_hal_clock", "/home/takwa/esp/esp-idf/components/esp_hal_dma", "/home/takwa/esp/esp-idf/components/esp_hal_gpio", "/home/takwa/esp/esp-idf/components/esp_hal_gpspi", "/home/takwa/esp/esp-idf/components/esp_hal_i2c", "/home/takwa/esp/esp-idf/components/esp_hal_i2s", "/home/takwa/esp/esp-idf/components/esp_hal_mspi", "/home/takwa/esp/esp-idf/components/esp_hal_pmu", "/home/takwa/esp/esp-idf/components/esp_hal_rtc_timer", "/home/takwa/esp/esp-idf/components/esp_hal_security", "/home/takwa/esp/esp-idf/components/esp_hal_timg", "/home/takwa/esp/esp-idf/components/esp_hal_touch_sens", "/home/takwa/esp/esp-idf/components/esp_hal_twai", "/home/takwa/esp/esp-idf/components/esp_hal_uart", "/home/takwa/esp/esp-idf/components/esp_hal_usb", "/home/takwa/esp/esp-idf/components/esp_hal_wdt", "/home/takwa/esp/esp-idf/components/esp_hw_support", "/home/takwa/esp/esp-idf/components/esp_libc", "/home/takwa/esp/esp-idf/components/esp_mm", "/home/takwa/esp/esp-idf/components/esp_partition", "/home/takwa/esp/esp-idf/components/esp_pm", "/home/takwa/esp/esp-idf/components/esp_ringbuf", "/home/takwa/esp/esp-idf/components/esp_rom", "/home/takwa/esp/esp-idf/components/esp_security", "/home/takwa/esp/esp-idf/components/esp_stdio", "/home/takwa/esp/esp-idf/components/esp_system", "/home/takwa/esp/esp-idf/components/esp_timer", "/home/takwa/esp/esp-idf/components/esp_usb_cdc_rom_console", "/home/takwa/esp/esp-idf/components/esptool_py", "/home/takwa/esp/esp-idf/components/freertos", "/home/takwa/esp/esp-idf/components/hal", "/home/takwa/esp/esp-idf/components/heap", "/home/takwa/esp/esp-idf/components/log", "/home/takwa/esp/hello_world/main", "/home/takwa/esp/esp-idf/components/mbedtls", "/home/takwa/esp/esp-idf/components/partition_table", "/home/takwa/esp/esp-idf/components/pthread", "/home/takwa/esp/esp-idf/components/soc", "/home/takwa/esp/esp-idf/components/spi_flash", "/home/takwa/esp/esp-idf/components/xtensa", "" ],
     "build_component_info" : {
         "app_update": {
             "alias": "idf::app_update",
@@ -87,6 +87,21 @@
             "file": "/home/takwa/esp/hello_world/build/esp-idf/cxx/libcxx.a",
             "sources": [ "/home/takwa/esp/esp-idf/components/cxx/cxx_exception_stubs.cpp", "/home/takwa/esp/esp-idf/components/cxx/cxx_guards.cpp", "/home/takwa/esp/esp-idf/components/cxx/cxx_init.cpp" ],
             "include_dirs": []
+        },
+        "driver": {
+            "alias": "idf::driver",
+            "target": "___idf_driver",
+            "prefix": "idf",
+            "dir": "/home/takwa/esp/esp-idf/components/driver",
+            "type": "LIBRARY",
+            "lib": "__idf_driver",
+            "reqs": [ "esp_hal_i2c", "esp_hal_twai", "esp_hal_touch_sens" ],
+            "priv_reqs": [ "esp_timer", "esp_mm", "esp_driver_gpio", "esp_ringbuf", "esp_pm" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "/home/takwa/esp/hello_world/build/esp-idf/driver/libdriver.a",
+            "sources": [ "/home/takwa/esp/esp-idf/components/driver/i2c/i2c.c", "/home/takwa/esp/esp-idf/components/driver/touch_sensor/touch_sensor_common.c", "/home/takwa/esp/esp-idf/components/driver/touch_sensor/esp32/touch_sensor.c", "/home/takwa/esp/esp-idf/components/driver/twai/twai.c" ],
+            "include_dirs": [ "i2c/include", "touch_sensor/include", "twai/include", "touch_sensor/esp32/include" ]
         },
         "efuse": {
             "alias": "idf::efuse",
@@ -268,6 +283,21 @@
             "sources": [ "/home/takwa/esp/esp-idf/components/esp_hal_gpspi/esp32/spi_periph.c", "/home/takwa/esp/esp-idf/components/esp_hal_gpspi/spi_hal.c", "/home/takwa/esp/esp-idf/components/esp_hal_gpspi/spi_hal_iram.c", "/home/takwa/esp/esp-idf/components/esp_hal_gpspi/spi_slave_hal.c", "/home/takwa/esp/esp-idf/components/esp_hal_gpspi/spi_slave_hal_iram.c" ],
             "include_dirs": [ "include", "esp32/include" ]
         },
+        "esp_hal_i2c": {
+            "alias": "idf::esp_hal_i2c",
+            "target": "___idf_esp_hal_i2c",
+            "prefix": "idf",
+            "dir": "/home/takwa/esp/esp-idf/components/esp_hal_i2c",
+            "type": "LIBRARY",
+            "lib": "__idf_esp_hal_i2c",
+            "reqs": [ "soc", "hal" ],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "/home/takwa/esp/hello_world/build/esp-idf/esp_hal_i2c/libesp_hal_i2c.a",
+            "sources": [ "/home/takwa/esp/esp-idf/components/esp_hal_i2c/i2c_hal.c", "/home/takwa/esp/esp-idf/components/esp_hal_i2c/i2c_hal_iram.c", "/home/takwa/esp/esp-idf/components/esp_hal_i2c/esp32/i2c_periph.c" ],
+            "include_dirs": [ "esp32/include", "include" ]
+        },
         "esp_hal_i2s": {
             "alias": "idf::esp_hal_i2s",
             "target": "___idf_esp_hal_i2s",
@@ -372,6 +402,21 @@
             "file": "/home/takwa/esp/hello_world/build/esp-idf/esp_hal_touch_sens/libesp_hal_touch_sens.a",
             "sources": [ "/home/takwa/esp/esp-idf/components/esp_hal_touch_sens/esp32/touch_sensor_legacy_hal.c", "/home/takwa/esp/esp-idf/components/esp_hal_touch_sens/touch_sensor_legacy_hal.c", "/home/takwa/esp/esp-idf/components/esp_hal_touch_sens/touch_sens_hal.c", "/home/takwa/esp/esp-idf/components/esp_hal_touch_sens/esp32/touch_sensor_periph.c" ],
             "include_dirs": [ "esp32/include", "include" ]
+        },
+        "esp_hal_twai": {
+            "alias": "idf::esp_hal_twai",
+            "target": "___idf_esp_hal_twai",
+            "prefix": "idf",
+            "dir": "/home/takwa/esp/esp-idf/components/esp_hal_twai",
+            "type": "LIBRARY",
+            "lib": "__idf_esp_hal_twai",
+            "reqs": [ "soc", "hal" ],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "/home/takwa/esp/hello_world/build/esp-idf/esp_hal_twai/libesp_hal_twai.a",
+            "sources": [ "/home/takwa/esp/esp-idf/components/esp_hal_twai/esp32/twai_periph.c", "/home/takwa/esp/esp-idf/components/esp_hal_twai/twai_hal_v1.c" ],
+            "include_dirs": [ "include", "esp32/include" ]
         },
         "esp_hal_uart": {
             "alias": "idf::esp_hal_uart",
@@ -491,6 +536,21 @@
             "managed_priv_reqs": [],
             "file": "/home/takwa/esp/hello_world/build/esp-idf/esp_pm/libesp_pm.a",
             "sources": [ "/home/takwa/esp/esp-idf/components/esp_pm/pm_locks.c", "/home/takwa/esp/esp-idf/components/esp_pm/pm_trace.c", "/home/takwa/esp/esp-idf/components/esp_pm/pm_impl.c" ],
+            "include_dirs": [ "include" ]
+        },
+        "esp_ringbuf": {
+            "alias": "idf::esp_ringbuf",
+            "target": "___idf_esp_ringbuf",
+            "prefix": "idf",
+            "dir": "/home/takwa/esp/esp-idf/components/esp_ringbuf",
+            "type": "LIBRARY",
+            "lib": "__idf_esp_ringbuf",
+            "reqs": [],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "/home/takwa/esp/hello_world/build/esp-idf/esp_ringbuf/libesp_ringbuf.a",
+            "sources": [ "/home/takwa/esp/esp-idf/components/esp_ringbuf/ringbuf.c" ],
             "include_dirs": [ "include" ]
         },
         "esp_rom": {
@@ -666,12 +726,12 @@
             "type": "LIBRARY",
             "lib": "__idf_main",
             "reqs": [],
-            "priv_reqs": [ "spi_flash" ],
+            "priv_reqs": [ "esp_driver_gpio", "driver", "freertos" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/takwa/esp/hello_world/build/esp-idf/main/libmain.a",
             "sources": [ "/home/takwa/esp/hello_world/main/hello_world_main.c" ],
-            "include_dirs": []
+            "include_dirs": [ "." ]
         },
         "mbedtls": {
             "alias": "idf::mbedtls",
@@ -880,7 +940,7 @@
             "priv_reqs": [ "esp_timer", "esp_mm", "esp_driver_gpio", "esp_ringbuf", "esp_pm" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "i2c/include", "touch_sensor/include", "twai/include" ]
+            "include_dirs": [ "i2c/include", "touch_sensor/include", "twai/include", "touch_sensor/esp32/include" ]
         },
         "efuse": {
             "alias": "idf::efuse",
@@ -2580,10 +2640,10 @@
             "source": "project_components",
             "lib": "__idf_main",
             "reqs": [],
-            "priv_reqs": [ "spi_flash" ],
+            "priv_reqs": [ "esp_driver_gpio", "driver", "freertos" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": []
+            "include_dirs": [ "." ]
         }
     },
     "gdbinit_files": {

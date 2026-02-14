@@ -1,52 +1,105 @@
-/*
- * SPDX-FileCopyrightText: 2010-2022 Espressif Systems (Shanghai) CO LTD
- *
- * SPDX-License-Identifier: CC0-1.0
- */
-
 #include <stdio.h>
-#include <inttypes.h>
-#include "sdkconfig.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-#include "esp_chip_info.h"
-#include "esp_flash.h"
-#include "esp_system.h"
+#include "driver/gpio.h"
+#include "driver/i2c.h"
+
+#define SLAVE_ADDR 0x26
+
+#define I2C_MASTER_NUM I2C_NUM_0
+#define I2C_MASTER_FREQ_HZ 100000
+#define I2C_MASTER_SCL_IO 22
+#define I2C_MASTER_SDA_IO 21
+
+TaskHandle_t i2cTaskHandle;
+TaskHandle_t processDataTaskHandle;
+TaskHandle_t backendTaskHandle;
+
+void init_i2c(void)
+{
+    i2c_config_t config = {
+        .mode = I2C_MODE_MASTER,
+        .sda_io_num = I2C_MASTER_SDA_IO,
+        .sda_pullup_en = GPIO_PULLUP_ENABLE,
+        .scl_io_num = I2C_MASTER_SCL_IO,
+        .scl_pullup_en = GPIO_PULLUP_ENABLE,
+        .master.clk_speed = I2C_MASTER_FREQ_HZ
+    };
+
+    i2c_param_config(I2C_MASTER_NUM, &config);
+    i2c_driver_install(I2C_MASTER_NUM, config.mode, 0, 0, 0);
+}
+
+void i2cTask(void* pvParameters)
+{
+    uint8_t temp, humi;
+
+    while (1)
+    {
+        i2c_cmd_handle_t cmd = i2c_cmd_link_create();
+
+        i2c_master_start(cmd);
+        i2c_master_write_byte(cmd, (SLAVE_ADDR << 1) | I2C_MASTER_READ, true);
+        i2c_master_read_byte(cmd, &temp, I2C_MASTER_ACK);
+        i2c_master_read_byte(cmd, &humi, I2C_MASTER_NACK);
+        i2c_master_stop(cmd);
+
+        i2c_master_cmd_begin(I2C_MASTER_NUM, cmd, portMAX_DELAY);
+        i2c_cmd_link_delete(cmd);
+
+        printf("I2C Read Done\n");
+
+        xTaskNotifyGive(processDataTaskHandle);
+
+        vTaskDelay(pdMS_TO_TICKS(1000));
+    }
+}
+
+void processDataTask(void* pvParameters)
+{
+    while (1)
+    {
+        ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+
+        printf("Processing temperature\n");
+        printf("Processing humidity\n");
+
+        xTaskNotifyGive(backendTaskHandle);
+    }
+}
+
+void backendTask(void* pvParameters)
+{
+    while (1)
+    {
+        ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+
+        printf("Sending data to backend...\n");
+    }
+}
 
 void app_main(void)
 {
-    printf("Hello world!\n");
-    printf("Hello from Takwa!\n");
-    /* Print chip information */
-    esp_chip_info_t chip_info;
-    uint32_t flash_size;
-    esp_chip_info(&chip_info);
-    printf("This is %s chip with %d CPU core(s), %s%s%s%s, ",
-           CONFIG_IDF_TARGET,
-           chip_info.cores,
-           (chip_info.features & CHIP_FEATURE_WIFI_BGN) ? "WiFi/" : "",
-           (chip_info.features & CHIP_FEATURE_BT) ? "BT" : "",
-           (chip_info.features & CHIP_FEATURE_BLE) ? "BLE" : "",
-           (chip_info.features & CHIP_FEATURE_IEEE802154) ? ", 802.15.4 (Zigbee/Thread)" : "");
+    init_i2c();
 
-    unsigned major_rev = chip_info.revision / 100;
-    unsigned minor_rev = chip_info.revision % 100;
-    printf("silicon revision v%d.%d, ", major_rev, minor_rev);
-    if(esp_flash_get_size(NULL, &flash_size) != ESP_OK) {
-        printf("Get flash size failed");
-        return;
-    }
+    xTaskCreate(i2cTask,
+                "i2cTask",
+                4096,
+                NULL,
+                5,
+                &i2cTaskHandle);
 
-    printf("%" PRIu32 "MB %s flash\n", flash_size / (uint32_t)(1024 * 1024),
-           (chip_info.features & CHIP_FEATURE_EMB_FLASH) ? "embedded" : "external");
+    xTaskCreate(processDataTask,
+                "processDataTask",
+                4096,
+                NULL,
+                4,
+                &processDataTaskHandle);
 
-    printf("Minimum free heap size: %" PRIu32 " bytes\n", esp_get_minimum_free_heap_size());
-
-    for (int i = 10; i >= 0; i--) {
-        printf("Restarting in %d seconds...\n", i);
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
-    }
-    printf("Restarting now.\n");
-    fflush(stdout);
-    esp_restart();
+    xTaskCreate(backendTask,
+                "backendTask",
+                4096,
+                NULL,
+                3,
+                &backendTaskHandle);
 }

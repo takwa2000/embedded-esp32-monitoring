@@ -85,4 +85,12 @@
 /home/takwa/esp/hello_world/build/esp-idf/esp_libc/libesp_libc.a
 /home/takwa/esp/hello_world/build/esp-idf/pthread/libpthread.a
 /home/takwa/esp/hello_world/build/esp-idf/cxx/libcxx.a
+/home/takwa/esp/hello_world/build/esp-idf/esp_hal_i2c/libesp_hal_i2c.a
+/home/takwa/esp/hello_world/build/esp-idf/esp_hal_twai/libesp_hal_twai.a
+/home/takwa/esp/hello_world/build/esp-idf/esp_ringbuf/libesp_ringbuf.a
+/home/takwa/esp/hello_world/build/esp-idf/driver/libdriver.a
+/home/takwa/esp/hello_world/build/esp-idf/esp_hal_i2c/libesp_hal_i2c.a
+/home/takwa/esp/hello_world/build/esp-idf/esp_hal_twai/libesp_hal_twai.a
+/home/takwa/esp/hello_world/build/esp-idf/esp_ringbuf/libesp_ringbuf.a
 /home/takwa/esp/hello_world/build/esp-idf/main/libmain.a
+/home/takwa/esp/hello_world/build/esp-idf/driver/libdriver.a

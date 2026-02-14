@@ -1,4 +1,4 @@
-Command: cmake -G Ninja -B /home/takwa/esp/hello_world/build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/home/takwa/.espressif/python_env/idf6.1_py3.10_env/bin/python -DESP_PLATFORM=1 -DIDF_TARGET=esp32 -DCCACHE_ENABLE=False /home/takwa/esp/hello_world
+Command: cmake -G Ninja -B /home/takwa/esp/hello_world/build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/home/takwa/.espressif/python_env/idf6.1_py3.10_env/bin/python -DESP_PLATFORM=1 -DCCACHE_ENABLE=False /home/takwa/esp/hello_world
 Configuration Report               
  ───────────────────────────────── 
    Parser Version: 1               
